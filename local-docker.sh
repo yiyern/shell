@@ -6,6 +6,7 @@ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
 sudo yum clean all
 sudo yum makecache fast
 sudo yum install docker-ce -y
+sudo mkdir -p /etc/docker
 sudo cat > /etc/docker/daemon.json <<EOF
 {
 "registry-mirrors": ["https://registry.docker-cn.com","https://docker.mirrors.ustc.edu.cn","https://a5agyt8o.mirror.aliyuncs.com"]
